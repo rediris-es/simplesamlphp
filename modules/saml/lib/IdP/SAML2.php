@@ -147,7 +147,7 @@ class sspmod_saml_IdP_SAML2 {
 	 * @param int|NULL $AssertionConsumerServiceIndex  AssertionConsumerServiceIndex from request.
 	 * @return array  Array with the Location and Binding we should use for the response.
 	 */
-	private static function getAssertionConsumerService(array $supportedBindings, SimpleSAML_Configuration $spMetadata,
+	public static function getAssertionConsumerService(array $supportedBindings, SimpleSAML_Configuration $spMetadata,
 		$AssertionConsumerServiceURL, $ProtocolBinding, $AssertionConsumerServiceIndex) {
 		assert('is_string($AssertionConsumerServiceURL) || is_null($AssertionConsumerServiceURL)');
 		assert('is_string($ProtocolBinding) || is_null($ProtocolBinding)');
